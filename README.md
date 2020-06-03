@@ -3,7 +3,7 @@
 This benchmark is based on a load test script for a simple API,
 unique endpoint that returns the number of requests it has processed.
 
-## Framework used for Go: gin-gonic 1.6.3
+## Framework used for Go app: gin-gonic 1.6.3
 
 > Commands to create a project:
 >
@@ -14,7 +14,7 @@ unique endpoint that returns the number of requests it has processed.
 > export GO111MODULES="on"
 > go build 
 
-## Framework used for Rust: activ-web 2.0
+## Framework used for Rust app: activ-web 2.0
 
 > Commands to create a project:
 >
@@ -46,3 +46,8 @@ Always hits `/helloWork` endpoint, it triggers bursts in different sequences
  9. hits only once
 
 you can check this [script](load_test.sh)
+
+these are the results for each app:
+
+[gin163 results](gin163/load_test_result.txt)
+[actixweb20 results](actixweb20/load_test_result.txt)
