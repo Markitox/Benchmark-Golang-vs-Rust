@@ -1,0 +1,169 @@
+./load_test.sh
+ENDPOINT: http://127.0.0.1:8080/helloWorld
+==> Simple request
+HTTP/1.1 200 OK
+content-length: 11
+content-type: text/plain; charset=utf-8
+date: Wed, 03 Jun 2020 09:42:45 GMT
+
+Request # 1
+
+==> First load
+
+Summary:
+  Total:    1.1754 secs
+  Slowest:  0.0105 secs
+  Fastest:  0.0001 secs
+  Average:  0.0012 secs
+  Requests/sec: 85077.8610
+
+  Total data:   1488900 bytes
+  Size/request: 14 bytes
+
+Response time histogram:
+  0.000 [1] |
+  0.001 [50008] |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.002 [45821] |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.003 [3316]  |■■■
+  0.004 [619]   |
+  0.005 [140]   |
+  0.006 [23]    |
+  0.007 [24]    |
+  0.008 [29]    |
+  0.009 [15]    |
+  0.010 [4] |
+
+
+Latency distribution:
+  10% in 0.0006 secs
+  25% in 0.0009 secs
+  50% in 0.0011 secs
+  75% in 0.0013 secs
+  90% in 0.0016 secs
+  95% in 0.0020 secs
+  99% in 0.0031 secs
+
+Details (average, fastest, slowest):
+  DNS+dialup:   0.0000 secs, 0.0001 secs, 0.0105 secs
+  DNS-lookup:   0.0000 secs, 0.0000 secs, 0.0000 secs
+  req write:    0.0000 secs, 0.0000 secs, 0.0031 secs
+  resp wait:    0.0010 secs, 0.0000 secs, 0.0047 secs
+  resp read:    0.0001 secs, 0.0000 secs, 0.0080 secs
+
+Status code distribution:
+  [200] 100000 responses
+
+
+
+==> Second request
+
+Summary:
+  Total:    1.2796 secs
+  Slowest:  0.0116 secs
+  Fastest:  0.0001 secs
+  Average:  0.0013 secs
+  Requests/sec: 78146.8880
+
+  Total data:   1600000 bytes
+  Size/request: 16 bytes
+
+Response time histogram:
+  0.000 [1] |
+  0.001 [48659] |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.002 [47542] |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.004 [2942]  |■■
+  0.005 [575]   |
+  0.006 [123]   |
+  0.007 [93]    |
+  0.008 [33]    |
+  0.009 [18]    |
+  0.010 [13]    |
+  0.012 [1] |
+
+
+Latency distribution:
+  10% in 0.0007 secs
+  25% in 0.0010 secs
+  50% in 0.0012 secs
+  75% in 0.0014 secs
+  90% in 0.0017 secs
+  95% in 0.0021 secs
+  99% in 0.0034 secs
+
+Details (average, fastest, slowest):
+  DNS+dialup:   0.0000 secs, 0.0001 secs, 0.0116 secs
+  DNS-lookup:   0.0000 secs, 0.0000 secs, 0.0000 secs
+  req write:    0.0000 secs, 0.0000 secs, 0.0032 secs
+  resp wait:    0.0011 secs, 0.0000 secs, 0.0060 secs
+  resp read:    0.0001 secs, 0.0000 secs, 0.0098 secs
+
+Status code distribution:
+  [200] 100000 responses
+
+
+
+==> Third request
+
+Summary:
+  Total:    1.1614 secs
+  Slowest:  0.0134 secs
+  Fastest:  0.0001 secs
+  Average:  0.0012 secs
+  Requests/sec: 86104.7974
+
+  Total data:   1600000 bytes
+  Size/request: 16 bytes
+
+Response time histogram:
+  0.000 [1] |
+  0.001 [79383] |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.003 [18902] |■■■■■■■■■■
+  0.004 [1473]  |■
+  0.005 [121]   |
+  0.007 [54]    |
+  0.008 [26]    |
+  0.009 [19]    |
+  0.011 [11]    |
+  0.012 [2] |
+  0.013 [8] |
+
+
+Latency distribution:
+  10% in 0.0006 secs
+  25% in 0.0009 secs
+  50% in 0.0011 secs
+  75% in 0.0013 secs
+  90% in 0.0016 secs
+  95% in 0.0020 secs
+  99% in 0.0031 secs
+
+Details (average, fastest, slowest):
+  DNS+dialup:   0.0000 secs, 0.0001 secs, 0.0134 secs
+  DNS-lookup:   0.0000 secs, 0.0000 secs, 0.0000 secs
+  req write:    0.0000 secs, 0.0000 secs, 0.0046 secs
+  resp wait:    0.0010 secs, 0.0000 secs, 0.0035 secs
+  resp read:    0.0001 secs, 0.0000 secs, 0.0049 secs
+
+Status code distribution:
+  [200] 100000 responses
+
+
+
+==> hit it for 30s
+Running 30s test @ http://127.0.0.1:8080/helloWorld
+  10 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     0.92ms   94.32us   3.76ms   76.50%
+    Req/Sec    10.87k   608.94    12.61k    67.91%
+  3256154 requests in 30.10s, 415.44MB read
+Requests/sec: 108178.55
+Transfer/sec:     13.80MB
+==> Last simple request
+HTTP/1.1 200 OK
+content-length: 17
+content-type: text/plain; charset=utf-8
+date: Wed, 03 Jun 2020 09:43:49 GMT
+
+Request # 3556243
+
+Total time in seconds: 65
