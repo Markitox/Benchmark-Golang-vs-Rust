@@ -79,4 +79,4 @@ Since I did not look for any tool to get profiling data for each app I don't hav
 ## Rust with Actix-web 2.0
 
 ### Actix-web 2.0
-![Actix-web](screenshots/actixweb20.png)
+![Actix-web](screenshots/actix-web20.png)
