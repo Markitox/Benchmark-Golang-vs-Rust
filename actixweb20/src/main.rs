@@ -11,7 +11,7 @@ async fn main() -> std::io::Result<()> {
             .route("/helloWorld", web::get().to(
                 controller::hello_world_controller::hello_world))
     })
-    .bind("0.0.0.0:8080")?
+    .bind("0.0.0.0:8080").unwrap()
     .run()
     .await
 }
